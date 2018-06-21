@@ -1,5 +1,5 @@
 {{!-- Header section --}}
-<header id="header" class="header {{^is "home, tag, author"}}toolbar-shadow{{/is}}">
+<header id="header" class="header {{^is "tag, author"}}toolbar-shadow{{/is}}">
     <section class="header-wrap u-flex-wrap u-flex-center">
 
         {{!-- Header Logo --}}
@@ -31,6 +31,9 @@
         <aside class="header-follow u-flex u-h-b-lg social_box">
             {{#if @blog.facebook}} <a title="Facebook {{@blog.facebook}}" href="{{facebook_url}}" target="_blank" class="i-facebook"></a>{{/if}}
             {{#if @blog.twitter}} <a title="Twitter {{@blog.twitter}}" href="{{twitter_url}}" target="_blank" class="i-twitter"></a>{{/if}}
+            <a title="Youtube" href="https://www.youtube.com/c/TropicalPuppy" target="_blank" class="i-youtube"></a>
+            <a title="Discord" href="https://discord.gg/sUzBZEp" target="_blank" class="i-discord"></a>
+            <a title="Reddit" href="https://www.reddit.com/r/fantasyfarming/" target="_blank" class="i-reddit"></a>
         </aside>
 
         {{!-- Search - menu open and  close for mobile --}}

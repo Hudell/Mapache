@@ -1,9 +1,9 @@
 {{!-- Sidebar right --}}
 <div id="sidebar" class="col s12 m4 sidebar sidebar-sticky u-h-b-{{#is "post"}}lg{{else}}md{{/is}}">
-    {{!-- 5 articles featured in page (home - author - tag) --}}
+
     {{#is "home" }}
-        {{#get "posts" filter="featured:true" limit="2" as |featured| }}
-            {{> "sidebar-post-featured" widgetTitle=(t "Featured Posts") widgetPosts=featured }}
+        {{#get "posts" filter="page:true+featured:true+tag:games" as |gamelist| }}
+            {{> "sidebar-games" widgetTitle=(t "Games") widgetPosts=gamelist }}
         {{/get}}
     {{/is}}
 
@@ -14,8 +14,7 @@
         {{/get}}
     {{/is}}
 
-    {{!-- Tag Cloud --}}
-    {{> "sidebar-tag-cloud" }}
+
 
     {{!-- Twitter --}}
     <div class="sidebar-items u-hide u-card-shadow">
@@ -28,4 +27,7 @@
         <h3 class="sidebar-title">Facebook</h3>
         <div class="widget-facebook"></div>
     </div>
+
+<iframe src="https://discordapp.com/widget?id=363007060461223936&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
+
 </div>

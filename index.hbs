@@ -4,7 +4,7 @@
 
 {{^is "paged"}}
 
-<section id="cover" class="cover u-flex-wrap" style="min-height:100vh">
+<section id="cover" class="cover u-flex-wrap" style="min-height:100vh; display:none">
     {{!-- Image featured --}}
     {{#if @blog.cover_image}}
         <div class="u-absolute0 u-block u-bg-gradient" style="background-color:#000"></div>
@@ -18,7 +18,7 @@
         {{!-- Blog description --}}
         <p class="cover-description animated bounceIn">{{@blog.description}}</p>
         {{!-- Btn suscribe --}}
-        <a id="btn-home" href="{{@blog.url}}/subscribe" class="btn-subscribe-home animated bounceIn u-textUppercase">{{t "Subscribe"}}</a>
+{{!--        <a id="btn-home" href="{{@blog.url}}/subscribe" class="btn-subscribe-home animated bounceIn u-textUppercase">{{t "Subscribe"}}</a> --}}
     </div>
 
     {{!-- Scroll --}}
@@ -31,6 +31,24 @@
         </span>
     </a>
 
+</section>
+
+<section id="cover" class="cover author u-flex-wrap">
+    {{!-- Image featured --}}
+    {{#if @blog.cover_image}}
+        <div class="u-absolute0 u-block u-bg-gradient" style="background-color:#000"></div>
+        <div class="cover-background cover-lazy u-absolute0 u-block" data-original="{{@blog.cover_image}}" style="background-color:#ffab57; background-repeat: no-repeat; background-position: center; background-attachment:unset"></div>
+    {{/if}}
+
+    <article class="cover-wrap u-flex-aling-center">
+        <div class="author-header">
+            <div class="author-name-wrap animated bounceIn">
+                <h1 class="author-name"></h1>
+            </div>
+        </div>
+
+    </article>
+    <a href="#ScrollBody" class="scrolltop mouse u-h-b-md"><span class="scroll"></span></a>
 </section>
 
 {{/is}}
