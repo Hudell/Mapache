@@ -1,84 +1,78 @@
-# Mapache for [Ghost](https://github.com/tryghost/ghost/)
+# Mapache free theme for [Ghost](https://github.com/tryghost/ghost/)
 
-[![Ghost version](https://img.shields.io/badge/Ghost-1.x-brightgreen.svg?style=flat-square)](https://ghost.org/)
-[![Node version](https://img.shields.io/node/v/uno-zen.svg?style=flat-square)](https://nodejs.org/en/)
-[![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://bit.ly/PayPal-GodoFredoNinja)
+[![Ghost version](https://img.shields.io/badge/Ghost-2.x-brightgreen.svg)](https://github.com/TryGhost/Ghost)
+[![Donate](https://img.shields.io/badge/donate-paypal-blue.svg)](https://bit.ly/PayPal-GodoFredoNinja)
 
-> Minimalist Material Design and Elegant theme for [Ghost](https://github.com/tryghost/ghost/)
+> Minimalist Material Design and Elegant theme.
 
-## Free theme for Ghost
+Hi. I created this theme for ghost especially for you.
+It is available for free so you can use on your site. It is strictly forbidden to use it for commercial use. If you have any suggestions to improve the theme,  you can send me a tweet [@GodoFredoNinja](https://goo.gl/y3aivK)
 
-Hello, I created this theme Ghost to see how it works. It is available for free so you can use on your site. It is strictly forbidden commercial use. If you have any suggestions to improve the theme,  you can send me tweet to [@GodoFredoNinja](http://bit.ly/tw-GodoFredoNinja)
+## If you have a ❤ heart and value my work. 🙏 Please, help me with a small donation on [Paypal](https://bit.ly/PayPal-GodoFredoNinja). It'll help motivate me to update the theme with many improvements
 
-### 😃 To have updated the subject please help me with a small collaboration in [paypal](https://bit.ly/PayPal-GodoFredoNinja). I will thank you enormentene
+[![donate](./donate.gif)](https://bit.ly/PayPal-GodoFredoNinja)
 
-[![](./documentation/donate.gif)](https://bit.ly/PayPal-GodoFredoNinja)
-
-![](./documentation/mapache-screenshot.png)
+![mapache theme for ghost](./screenshot.jpg)
 
 ## Demo
 
-> Later I will write an article showing the functionality of the theme. For the moment in my page I am using one of my theme [simply](https://github.com/godofredoninja/simply)
-
-You can see a demo in my [blog](http://bit.ly/GodoFredoNinja-Mapache).
-
-## Mapache Support for Web Browsers
-
-Mapache supports the following web [browsers](http://caniuse.com/#search=flexbox)
+You can see mapache in action on my Page [Demo](https://goo.gl/V7moIY)
 
 ## Featured
 
-- Support for different [languages](http://themes.ghost.org/docs/i18n#section-how-to-add-any-language) (en - es)
+- Support for different [languages](http://themes.ghost.org/docs/i18n#section-how-to-add-any-language) (en - es - de - ko - fr)
 - Responsive layout
-- Blog navigation
-- Home title Typed style
-- Page 404 (Multiple faces emoticons)
+- Magazine style home page or personal blog style
+- 404 error page (emoticons — last 6 articles)
 - Page subscribe
 - Pagination Infinite Scroll
-- Cover images for blog, tag and author
-- links to followers in social media
+- Instagram Feed in footer of Post
+- Optional menu at the footer of the page
+- [AMP](https://github.com/godofredoninja/Hodor-AMP-Template-for-Ghost) Template (Accelerated Mobile Pages)
+- Follow on Social Media
 - Related Articles (6 articles)
-- Template (Video Post Format)
-- Teamplate (Image post Format)
-- Template (Audio post Format)
-- AMP Template (Accelerated Mobile Pages)
-- 5 articles featured in the home of the page section sidebar
-- 5 articles latest posts in the (author - tag - post) section sidebar
-- 10 Tags in the sidebar
+- Template - Post single
+- Template - Post full header
+- Template - Video post format
+- Template - Image post format
+- Template - Image single post format
+- Template - not image post => featured image is not displayed
+- 5 featured articles in the sidebar (home - tag - author)
+- 5 lates articles in the sidebar (post)
+- Tag Cloud in the sidebar
+- Previous and next articles buttons
 - Support for comments (Facebook or Disqus)
 - Support for counter comments (Facebook or Disqus)
-- Buttons to share the article
-- YouTube, Vimeo, kickstarter, dailymotion, vid.me -> Video Responsive
-- YouTube Subscribe Button => Video Post Format
-- Facebook widget in sidebar
-- Twitter widget in sidebar
-- Code syntax [Prismjs](http://prismjs.com/index.html) Supported all syntax.
+- Buttons to share the article (Facebook - Twitter - Reddit - Linkedin - Pinterest - Whatsapp)
+- Sticky content in the sidebar
+- YouTube, Vimeo, kickstarter, Facebook, dailymotion => Responsive
+- Lazy image loading for better performance only in backgrounds
+- Code syntax [Prismjs](http://prismjs.com/index.html#languages-list) Supported all syntax.
+
+## Web Browser Support for mapache
+
+mapache supports the following web [browsers](https://caniuse.com/#search=CSS%20Variables)
 
 ## Ghost settings
 
-- Enable **all** checkboxes on the labs page in your Ghost admin panel.
+- **Enable the following checkboxes on the labs page in your Ghost admin panel.**
 
-![](./documentation/img-api.png)
+![ghost settings](./documentation/ghost-settings.png)
 
 ## Mapache settings
 
-### Social Links
-
-Add the Social Links only for the services you want to appear in the header section of your website. Pay attention as enabling too many services will cause menu problems.
-
-### YouTube Subscribe Button
-
-This section enables the YouTube Post format. Add the Channel Name and Channel ID which can be found here [YouTube Advanced Settings](https://www.youtube.com/account_advanced)
-
-— Copy the below script to `Settings -> Code Injection  -> Blog Footer section`
+— Copy the below script to `Code Injection  -> Blog Footer`
 
 ```html
 <script>
 /*====================================================
-  THEME SETTINGS & GLOBAL VARIABLES
+  MAPACHE SETTINGS & GLOBAL VARIABLES
 ====================================================*/
 
-/* 01. Social Media Follow */
+/* 01. Social Media Follow - Optional
+ * facebook and twitter is not necessary because I use them from the ghost settings
+ * add only what you need
+ */
 var followSocialMedia = {
   'google': 'https://...',
   'youtube': 'https://...',
@@ -94,58 +88,51 @@ var followSocialMedia = {
   'pinterest':'https://...',
   'telegram':'https://...',
   'discord':'https://...',
-  'feed':'https://...',
+  'rss':'https://...',
 };
 
-/* 02. Title for home Page */
-var homeTitle = '... your title ...';
+/* 02. Instagram - Optional
+ * It will only be shown in the footer of the posts.
+ */
+var instagramToken = 'Token_app_instagram';
+var instagramUserId = 'User_ID';
+var instagramUserName = 'User_Name';
 
-/* if you want to have the title style typed
-ignore homeTitle and add this code */
-var homeTitleTyped = ['YOUR TITLE 1', 'YOUR TITLE 2', 'YOUR TITLE 3', 'YOUR TITLE 4'];
+/* 03. Footer Menu - Optional */
+var footerLinks = {
+  'MENU 1': 'https://example.com',
+  'MENU 2': 'https://example.com',
+  'MENU 3': 'https://example.com',
+};
 
-/* 03. Home BTN <SUBSCRIBE> */
-var homeBtnTitle = 'Name BTN';
-var homeBtnURL = 'https://...';
+/* 04. Comments (Disqus or Facebook) */
 
-/* 04. Youtube button subscribe for Video Post Format */
-var youtubeChannelName = 'YOUR_CHANNEL_NAME';
-var youtubeChannelID = 'YOUR_CHANNEL_ID';
-
-/* 05. Disqus Comment Settings */
+/* Disqus Comment Settings */
 var disqusShortName = 'YOUR_DISQUS_SHORTCUT_HERE';
 
-/* 06. Facebook Widget Settings */
-var fansPageName = 'YOUR_FANS_PAGE_NAME';
+/* Facebook Comments Settings
+ * Changing the Language (en_US - es_ES - es_LA) more information link below
+ * https://developers.facebook.com/docs/plugins/comments/#language
+ */
+var facebookLocaleComments = 'en_US';
 
-/* 07. Twitter Widget Settings */
-var twitterUserName = 'YOUR_TWITTER_NAME';
+/* 05. Twitter Widget Settings - optional */
+var twitterUserName = 'YOUR_TWITTER_USER_NAME';
 var twitterNumber = 2;
+
+
+/* The following configuration is optional
+ * only if you have activated the personal blog design
+ *====================================================*/
+
+ /* 06. Title for home Page */
+var homeTitlee = '... your title ...';
+
+/* 07. Home BTN <SUBSCRIBE> */
+var homeBtnTitlee = 'Name BTN';
+var homeBtnURLe = 'https://...';
+
 </script>
-
-<!-- Disqus Comments Count-->
-<script id="dsq-count-scr" src="//YOUR_DISQUS_SHORTCUT_HERE.disqus.com/count.js" async></script>
-```
-
-### Facebook Comments
-
-To use facebook comments, skip the configuration Disqus.
-
-This enables comments and comment counter
-
-— Add the code `Settings -> Code Injection -> Blog Footer`
-
-```html
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    $('.mapache-facebook').removeClass('u-hide');
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.async=true;
-    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11';
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
 ```
 
 ## Publication Language
@@ -154,53 +141,36 @@ This enables comments and comment counter
 
 - `en` — English default language
 - `es` — Español
-- `de` — German
+- `de` — German - By [Frederik Niedernolte](https://github.com/MaluNoPeleke)
+- `ko` — Korean - By [SHGroup](https://github.com/sunghun7511)
+- `fr` — French - By [Letroll](https://github.com/letroll)
 
-![](./documentation/language.png)
+![Publication Language for ghost](./documentation/language.png)
 
 if you want to have in another language you just have to copy `locales>en.json` and rename the file then translate to your favorite language:
 
 Just enter the [language/locale tag](https://www.w3schools.com/tags/ref_language_codes.asp) of the files to use (e.g.: `fr.json` for French, `zh.json` for Chinese, `ja.json` for Japanese)
 
-## Change Theme Style
+## Post Format
 
-To change the color of the Mapache theme select one of the theme styles below and copy it into the Setting -> Code Injection -> Blog Header
+ Mapache has different templates for post formats. I will mention some of them.
 
-```html
-<!-- Theme indigo -->
-<link rel="stylesheet" href="/assets/styles/theme-indigo.css"/>
-<!-- Theme dark blue -->
-<link rel="stylesheet" href="/assets/styles/theme-dark-blue.css"/>
-<!-- Theme blue semi dark -->
-<link rel="stylesheet" href="/assets/styles/theme-blue-semi-dark.css"/>
-<!-- Theme blue -->
-<link rel="stylesheet" href="/assets/styles/theme-blue.css"/>
-<!-- Theme Grey -->
-<link rel="stylesheet" href="/assets/styles/theme-grey.css"/>
-<!-- Theme dark cyan -->
-<link rel="stylesheet" href="/assets/styles/theme-dark-cyan.css"/>
-<!-- Theme purple -->
-<link rel="stylesheet" href="/assets/styles/theme-purple.css"/>
-<!-- Theme teal -->
-<link rel="stylesheet" href="/assets/styles/theme-teal.css"/>
-<!-- Theme Green -->
-<link rel="stylesheet" href="/assets/styles/theme-green.css"/>
+ ![Post Format](./documentation/post-format.png)
 
-<!-- For theme white add two-color logo 230px * 130px -->
+ 1. **Post Full Header** — It will have the full title of the post and will include the sidebar.
 
-<!--
-  ***** 230px *****
-  *               *
-  ***************** 130px
-  *               *
-  *****************
--->
+ 2. **Post Image** — This template will have a very large featured image and the header background will also be transparent and include the sidebar. optional you can add the internal tag `#image` in your post so that you can see the image icon in the instories.
 
+ 3. **Post Image Single** — It's similar to post image. The difference is that you won't have a sidebar.
 
-<link rel="stylesheet" href="/assets/styles/theme-white.css"/>
-```
+ 4. **Post Video** — the first video found will move to the top of the page. you can add the internal tag `#video` in your post so that you can see the image icon in the instories and filter related video to show below the video at the top of the page.
+    - vimeo
+    - Dailymotion
+    - Youtube
+    - Vid
+    - kickstarter
 
-![](./documentation/img-four.png)
+> Add video where convenient. When you change the theme you will not have problems and not have Problem in your AMP Template
 
 ### Add additional content to the sidebar
 
@@ -209,12 +179,16 @@ Add you own custom content into the side bar by editing the `./partials/sidebar.
 ```html
 <!-- Add your content to the bottom -->
 <div class="sidebar-items">
-  <div class="sidebar-title">...your title...</div>
+  <h3 class="sidebar-title u-fontSizeBase u-textColorDarker u-marginBottom20 u-fontWeightBolder">
+    ...your title...
+  </h3>
   ... your content ...
 </div>
 ```
 
 ### Warning - Note - Success
+
+> It is very important to add in the block of `Markdown` or `HTML`
 
 Add some more styling options to your articles text with these three styles.
 
@@ -226,50 +200,52 @@ Add some more styling options to your articles text with these three styles.
 <p class="success"> ... your text success ... </p>
 ```
 
-![](./documentation/note.png)
+![Warning Note](./documentation/warning-note-success.png)
 
 ### PrismJS code syntax
 
+> It is very important to add your code in the block of `Markdown`
+
 Make your code stand out. WIth the PrismJS code highlighter. PrismJS allows you to select which languge you embeded and performs code highlighting according to the language. Neat!
 
-Take a look at the [Prismjs Supported Language List](http://prismjs.com/#languages-list)
+Take a look at the [Prismjs Supported Language List](http://prismjs.com/#languages-list) to find your coding language.
 
-![](./documentation/code.png) to find your coding language.
+![Prism JS](./documentation/primsjs.png)
 
-## Template for (Video - Image - Audio)
+## Change Theme Style
 
-**Image** — The Featured image will become large in size.
+To make your changes with your favorite colors you just have to add the following code and replace with your colors
+[Themes](theme.md).
 
-**Video** — The first video in the article will be large in size. Supports formats
+---
 
-- vimeo
-- Dailymotion
-- Youtube
-- Vid
-- kickstarter
+## Home Personal Blog style
 
-**Audio** — The first Audio in the article will be large in size. Supports formats
+if you want to have the homepage in a personal blog style, please follow these steps.
 
-- Soundcloud
-- Mixcloud
-- Spotify
+- Rename or delete the file `home.hbs`
+- Edit the file `package.json` and change the number of post per page to 10.
 
-> Add video or Audio where convenient. When you change the theme you will not have problems and not have Problem in your AMP Template
+```json
+"config": {
+    "posts_per_page": 10
+  }
+```
 
-![](./documentation/video-format.png)
-
-![](./documentation/video.png)
+![Personal Blog](./documentation/mockup-personal-blog.jpg)
 
 ### Credits
 
 - [Hodor AMP Template](https://github.com/godofredoninja/Hodor-AMP-Template-for-Ghost)
-- [Typed](https://github.com/mattboldt/typed.js/)
 - [Normalize](https://necolas.github.io/normalize.css/)
 - [Jquery.ghostHunter](https://github.com/jamalneufeld/ghostHunter)
 - [Prismjs](http://prismjs.com/)
-- [theia-sticky-sidebar](https://github.com/WeCodePixels/theia-sticky-sidebar)
+- [sticky-kit](https://github.com/leafo/sticky-kit)
+- [lunr.js](https://github.com/olivernn/lunr.js)
+- [zoom.js](https://github.com/fat/zoom.js/)
 - [jquery-lazyload](http://www.appelsiini.net/projects/lazyload)
+- [Fonts](https://fonts.google.com/?selection.family=Fira+Mono|Merriweather:400,700|Ruda:400,700,900&query=Merriweather)
 
 ## Copyright & License
 
-Copyright (c) 2016 @GodoFredoNinja - Released under the [MIT license](LICENSE).
+Copyright (c) 2017 GodoFredoNinja - Released under the [CC BY-NC-SA 4.0](LICENSE).
