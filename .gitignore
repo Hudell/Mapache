@@ -5,6 +5,7 @@
 # Logs
 logs
 *.log
+*.ini
 
 # Runtime data
 pids
@@ -474,6 +475,14 @@ __pycache__/
 
 .sass-lint.yml
 .cache-loader
-*.map
-*.js.map
-.src
+yarn-error.log
+*.swp
+*.zip
+yarn.lock
+
+# master
+.sass-lint.yml
+.eslintrc
+.stylelintrc.js
+.gulpfile.js
+src/

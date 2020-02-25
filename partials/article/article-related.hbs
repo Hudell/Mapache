@@ -1,26 +1,23 @@
 {{!-- Article related --}}
 {{#get "posts" limit="6" filter="tags:[{{post.tags}}]+id:-{{post.id}}" include="tags" as |post_related|}}
-
-<section class="post-related u-backgroundWhite u-paddingTop30 u-paddingBottom20 u-overflowHidden">
-
-{{!-- Ad --}}
-{{> "ad/ad-post-footer"}}
-
 {{#if post_related}}
+
+<section class="post-related u-overflowHidden">
     <div class="extreme-container">
-        <div class="row story-card">
-
-            {{#foreach post_related}}
-
-            <div class="col s12 m6 l4">
-                {{> "story/story-grid"}}
+        <div class="row">
+            <div class="col s12">
+                <h2 class="post-related-title u-fontSizeBase title-line u-marginBottom40">{{t "Related Articles"}}</h2>
             </div>
 
+            {{#foreach post_related visibility="all"}}
+            <div class="col col-s12 s6 l4">
+                {{> "story/story-grid" class='u-fontSizeLarge u-fontWeightMedium'}}
+            </div>
             {{/foreach}}
 
         </div>
     </div>
-{{/if}}
-
 </section>
+
+{{/if}}
 {{/get}}
